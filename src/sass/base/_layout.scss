@@ -1,0 +1,156 @@
+.page-description {
+  padding-top: 6px;
+  border-top: 1px solid $gray-300;
+
+  .section-title {
+    margin-bottom: 20px;
+  }
+}
+
+.simple-block {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid $gray-400;
+  border-radius: 5px;
+
+  &-hover {
+    transition: .5s;
+
+    &:hover {
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.link-more {
+  position: relative;
+  display: inline-block;
+  padding-right: 15px;
+  padding-bottom: 2px;
+  color: $primary;
+  font-weight: 600;
+  transition: .5s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 15px;
+    background: $primary;
+    height: 1px;
+    opacity: 0;
+    transition: .5s;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    fill: $primary;
+    transition: .5s;
+  }
+
+  &:hover {
+
+    svg {
+      opacity: 0;
+    }
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+
+  li {
+    color: $gray-500;
+    margin-right: 15px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      margin-right: 25px;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    a {
+
+      svg {
+        fill: $gray-500;
+        transition: .5s;
+      }
+
+      &:hover {
+
+        svg {
+          fill: $secondary;
+        }
+      }
+    }
+
+  }
+
+  &__text {
+    font-size: .75rem;
+    margin-right: 10px;
+  }
+}
+
+.contacts-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: map_get($grid-breakpoints, md)) {
+    flex-direction: row;
+  }
+
+  li {
+    margin-bottom: 10px;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      margin-bottom: 0;
+    }
+
+    a {
+      font-size: .875rem;
+
+      svg {
+        fill: $primary;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.section-description {
+  padding: 25px 15px 20px;
+  background: rgba(#fff, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  text-align: center;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding: 40px 25px 35px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      font-size: 1rem;
+    }
+  }
+}

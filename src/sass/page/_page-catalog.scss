@@ -1,0 +1,25 @@
+#page-catalog {
+  padding-bottom: 60px;
+
+  .advertising-item {
+    margin-bottom: 3px;
+  }
+
+  .product-not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+
+    &__title {
+      font-size: 1.125rem;
+      font-weight: bold;
+      margin: 15px 0 5px;
+    }
+
+    &__subtitle {
+      color: $gray-500;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.slider-arrow {
+  display: flex;
+  justify-content: space-between;
+
+  &-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 60px;
+    background: rgba(#000, .2);
+    cursor: pointer;
+    z-index: 40;
+    transition: .5s;
+
+    svg {
+      fill: #fff;
+    }
+
+    &--prev {
+      border-radius: 0 15px 15px 0;
+    }
+
+    &--next {
+      border-radius: 15px 0 0 15px;
+    }
+
+    &:hover {
+      width: 40px;
+      background: rgba(#000, .4);
+    }
+  }
+}
+
+.flickity-page-dots {
+  
+  li {
+    position: relative;
+    width: 6px !important;
+    height: 6px !important;
+    margin: 0 9px !important;
+    background: $gray-400 !important;
+    transition: .5s;
+    opacity: 1 !important;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border-radius: 50%;
+      border: 1px solid $primary;
+      opacity: 0;
+      transition: .5s;
+    }
+
+    &.is-selected {
+      background: $primary !important;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}

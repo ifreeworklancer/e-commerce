@@ -1,0 +1,37 @@
+#popular {
+  padding-bottom: 30px;
+  z-index: 5;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 120px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: $gray-300;
+    z-index: -2;
+  }
+
+  .section-title {
+    margin-bottom: 15px;
+  }
+
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 15;
+  }
+}
+
+.popular-slider {
+  z-index: 10;
+
+  &-item {
+    width: 100%;
+    padding-bottom: 80px;
+  }
+}

@@ -1,0 +1,334 @@
+#page-checkout {
+  padding-bottom: 60px;
+}
+
+.checkout-steps {
+
+  .custom-radio {
+    margin-bottom: 10px;
+
+    .custom-control-label {
+      font-size: $font-size-base;
+      color: $body-color;
+    }
+  }
+
+  .checkout-select {
+    margin-bottom: 7px;
+    background: $body-bg;
+    cursor: pointer;
+    transition: .5s;
+
+    &.active {
+      background: #fff;
+
+      .checkout-select-body-item {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+
+    &-input {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 15px 20px;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        flex-direction: row;
+        align-items: center;
+        padding: 25px 30px;
+      }
+
+      &__logo {
+        max-width: 110px;
+        margin-bottom: 10px;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+          margin-right: 20px;
+          margin-bottom: 0;
+        }
+      }
+
+      &__title {
+        font-weight: 600;
+        font-size: 1.125rem;
+        margin-bottom: 10px;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+          margin-right: 20px;
+          margin-bottom: 0;
+        }
+      }
+
+      &__description {
+        color: $gray-500;
+      }
+    }
+
+    &-body {
+      position: relative;
+      height: 0;
+      transition: .5s;
+
+      &-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 20px 20px;
+        opacity: 0;
+        pointer-events: none;
+        transition: .8s;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+          padding: 0 30px 20px 120px;
+        }
+      }
+
+      &__title {
+        margin-bottom: 10px;
+        color: $gray-500;
+      }
+    }
+
+    &:hover {
+      background: #fff;
+    }
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  &-item {
+
+    .form-row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        flex-direction: row;
+      }
+
+      .form-group {
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+          width: 48%;
+        }
+
+        &--phone {
+
+          &.in-focus {
+
+            .phone-placeholder {
+              color: $body-color;
+              border-color: $body-color;
+            }
+          }
+
+          .phone-placeholder {
+            border: 1px solid $gray-400;
+            background: #fff;
+            border-right: none;
+            border-radius: 5px 0 0 5px;
+            padding: 12px 15px;
+            color: $gray-500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .5s;
+          }
+
+          .form-control {
+            border-radius: 0 5px 5px 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__title {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $gray-400;
+    margin-bottom: 15px;
+
+    span {
+      font-weight: bold;
+      color: $primary;
+    }
+  }
+}
+
+.checkout-card-wrapper {
+  margin-bottom: 10px;
+}
+
+.checkout-card {
+  margin-bottom: 7px;
+
+  &-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $gray-400;
+    margin-bottom: 15px;
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__item {
+      font-weight: 600;
+      color: $gray-500;
+      margin-bottom: 5px;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        margin-bottom: 0;
+      }
+
+      span {
+        color: $body-color;
+      }
+    }
+  }
+
+  &-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid $gray-400;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  .checkout-data-list {
+
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+
+      svg {
+        margin-right: 12px;
+        fill: $gray-500;
+      }
+    }
+  }
+
+  .checkout-data-delivery {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      align-items: center;
+      flex-direction: row;
+    }
+
+    &__image {
+      max-width: 90px;
+      margin-bottom: 10px;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        margin-bottom: 0;
+      }
+    }
+
+    &-description {
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        margin-left: 25px;
+      }
+    }
+
+    &__title {
+      color: $gray-500;
+      margin-bottom: 10px;
+      font-size: .75rem;
+    }
+  }
+
+  .checkout-data-payment {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      align-items: center;
+      flex-direction: row;
+    }
+
+    &__image {
+      max-width: 70px;
+    }
+
+    &__title {
+      font-size: .75rem;
+      color: $gray-500;
+      margin-bottom: 10px;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
+
+    }
+  }
+
+  .checkout-basket {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__value {
+        font-weight: bold;
+        font-size: 1rem;
+
+        span {
+          font-size: $font-size-base;
+          font-weight: normal;
+          margin-left: 2px;
+        }
+      }
+    }
+
+    &-description {
+      max-width: 80%;
+    }
+
+    &-quantity {
+      color: $gray-500;
+
+      span {
+        font-weight: bold;
+        color: $body-color;
+        margin-right: 2px;
+      }
+    }
+
+    &__title {
+      font-size: 1rem;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        font-size: 1.125rem;
+      }
+    }
+
+    &__text {
+      color: $gray-500;
+      font-size: .75rem;
+    }
+  }
+}

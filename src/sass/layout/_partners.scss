@@ -1,0 +1,86 @@
+#partners {
+  padding-bottom: 100px;
+  background: $gray-300;
+}
+
+.partners-wrapper {
+  padding: 25px 0;
+  background: #fff;
+  border-radius: 5px;
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    display: flex;
+    align-items: center;
+    padding: 25px 0 25px 40px;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 15px;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      padding-right: 50px;
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.partners-gallery {
+  position: relative;
+  padding: 0 10px;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    flex-wrap: nowrap;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    bottom: -10px;
+    width: 1px;
+    background: $gray-400;
+    display: none;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      display: block;
+    }
+  }
+
+  &-item {
+    position: relative;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    width: 50%;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      width: 25%;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      flex: 1 0 auto;
+      max-width: 33.333%;
+      width: auto;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.partners-item {
+  width: 100%;
+  padding-bottom: 60.869%;
+  background: $gray-200;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,145 @@
+#single-article {
+
+  p {
+    color: $gray-500;
+  }
+
+  .single-article-description {
+
+    &__date {
+      font-size: .625rem;
+      color: $gray-500;
+      margin-bottom: 15px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
+
+  .single-article-image {
+    max-width: 100%;
+    margin-bottom: 15px;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      margin-bottom: 0;
+    }
+  }
+
+  .single-article-wrapper {
+    padding-top: 35px;
+    margin-top: 5px;
+    border-top: 1px solid $gray-400;
+    margin-bottom: 25px;
+  }
+
+  .single-article-body {
+    border-bottom: 1px solid $gray-400;
+
+    h2, h3, h4, h5, h6 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 25px;
+    }
+
+    ul {
+      @extend %decorList;
+      margin-bottom: 25px;
+
+      li {
+        color: $gray-500;
+      }
+    }
+
+    a {
+      position: relative;
+      padding-bottom: 2px;
+      color: $primary;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: $primary;
+        transition: .5s;
+      }
+
+      &:hover {
+
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+
+    img {
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+
+    .video-prev {
+      margin-bottom: 20px;
+    }
+
+    .picture-description {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $gray-400;
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        flex-direction: row;
+      }
+
+      span {
+
+        &:last-of-type {
+          color: $gray-500;
+          font-size: .75rem;
+          margin-top: 5px;
+
+          @media (min-width: map_get($grid-breakpoints, md)) {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .single-article-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 0;
+    border-bottom: 1px solid $gray-400;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      flex-direction: row;
+    }
+  }
+
+  .single-article-author {
+    font-size: .75rem;
+    color: $gray-500;
+    margin-bottom: 10px;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      margin-bottom: 0;
+    }
+
+    a {
+      font-size: $font-size-base;
+      color: $body-color;
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+$primary: #FF862F;
+$secondary: #4B5F5F;
+$danger: #E95151;
+$green: #70DA6E;
+
+$gray-200: #FAFAFB;
+$gray-300: #F2F5F6;
+$gray-400: #E4ECEC;
+$gray-500: #94A6A6;
+$gray-600: #697477;
+
+$blue: #54E0FF;
+$purple: #EF8AFF;
+$pink: #F7A29C;
+
+$body-color: $secondary;
+$body-bg: $gray-200;
+
+$font-size-base: .875rem;
+$font-family-base: 'Proxima Nova', sans-serif;
+$headings-font-family: 'Proxima Nova', sans-serif;
+$font-weight-base: normal;
+$headings-font-weight: bold;
+
+$link-color: $body-color;
+$link-hover-decoration: none;
+
+$input-btn-border-width: 0;
+$input-btn-focus-width: 0;
+$input-btn-focus-color: rgba(#fff, 0);
+$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color;
+$input-btn-font-family: $font-family-base;
+
+$btn-border-width: 1px;
+$border-radius: 5px;
+
+$btn-padding-y: 15px;
+$btn-padding-x: 20px;
+
+$h1-font-size: $font-size-base * 2.142;
+$h2-font-size: $font-size-base * 2.571;
+$h3-font-size: $font-size-base * 2.142;
+$h4-font-size: $font-size-base * 1.428;
+$h5-font-size: $font-size-base * 1.285;
+$h6-font-size: $font-size-base * 1.142;
+
+$grid-gutter-widths: (
+        xs: 15px,
+        sm: 10px,
+        md: 10px,
+        lg: 3px,
+);
+
+$breadcrumb-font-size: .625rem;
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0;
+$breadcrumb-item-padding: 4px;
+$breadcrumb-margin-bottom: 1rem;
+$breadcrumb-bg: transparent;
+$breadcrumb-divider-color: $gray-500;
+$breadcrumb-active-color: $gray-500;
+$breadcrumb-border-radius: none;
+
+$pagination-padding-y: 13px;
+$pagination-padding-x: 9px;
+$pagination-color: $gray-500;
+$pagination-bg: transparent;
+$pagination-border-width: 1px;
+$pagination-border-color: $gray-400;
+$pagination-focus-box-shadow: none;
+$pagination-focus-outline: 0;
+$pagination-hover-color: $body-color;
+$pagination-hover-bg: #fff;
+$pagination-hover-border-color: $gray-400;
+$pagination-active-color: $body-color;
+$pagination-active-bg: #fff;
+$pagination-active-border-color: $gray-400;
+$pagination-disabled-color: $gray-600;
+$pagination-disabled-bg: #fff;
+$pagination-disabled-border-color: $gray-300;

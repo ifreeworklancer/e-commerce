@@ -1,0 +1,9 @@
+#page-blog {
+  padding-bottom: 60px;
+
+  .article-wrapper {
+    grid-gap: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid $gray-400;
+  }
+}

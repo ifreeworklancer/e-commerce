@@ -1,0 +1,100 @@
+.rs-container * {
+  user-select: none;
+}
+.rs-container {
+  position: relative;
+  height: 45px;
+  margin-top: 45px;
+}
+.rs-container .rs-bg, .rs-container .rs-selected {
+  background-color: $gray-300;
+  height: 3px;
+  border-radius: 3px;
+  left: 0;
+  position: absolute;
+  top: 5px;
+  width: 100%;
+}
+.rs-container .rs-selected {
+  background-color: $primary;
+  transition: all 0.2s linear;
+  width: 0;
+}
+.rs-container.disabled .rs-selected {
+  background-color: #ccc;
+  border-color: #bbb;
+}
+.rs-container .rs-pointer {
+  background-color: $primary;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  left: -10px;
+  position: absolute;
+  top: -4px;
+  transition: all 0.2s linear;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.rs-container.disabled .rs-pointer {
+  border-color: $gray-500;
+  box-shadow: none;
+}
+
+.rs-container.disabled .rs-pointer {
+  cursor: default;
+}
+
+.rs-container.sliding .rs-selected,
+.rs-container.sliding .rs-pointer {
+  transition: none;
+}
+
+.rs-container .rs-scale {
+  left: 0;
+  position: absolute;
+  top: 5px;
+  white-space: nowrap;
+}
+.rs-container .rs-scale span {
+  float: left;
+  position: relative;
+}
+
+.rs-container .rs-scale span:first-of-type {
+  display: none;
+}
+
+.rs-container .rs-scale span:last-of-type:before {
+  display: none;
+}
+.rs-container .rs-scale span ins {
+  color: $gray-500;
+  display: inline-block;
+  font-size: .625rem;
+  margin-top: 10px;
+  text-decoration: none;
+  margin-left: 0 !important;
+}
+.rs-container.disabled .rs-scale span ins {
+  color: #999;
+}
+
+.rs-tooltip {
+  color: $gray-500;
+  width: 45px;
+  height: 30px;
+  padding: 0;
+  background: #fff;
+  border: 1px solid $gray-400;
+  border-radius: 5px;
+  position: absolute;
+  transform: translate(-50%, -35px);
+  left: 6px;
+  text-align: center;
+}
+.rs-container.disabled .rs-tooltip {
+  border-color: #ccc;
+  color: #999;
+}

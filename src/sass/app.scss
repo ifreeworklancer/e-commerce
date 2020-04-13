@@ -1,0 +1,44 @@
+@import "config/variables";
+@import "config/placeholders";
+
+@import "~bootstrap/scss/bootstrap", "~flickity/dist/flickity.min.css";
+
+@import "base/body";
+@import "base/btn";
+@import "base/layout";
+@import "base/product";
+@import "base/article";
+@import "base/filters";
+@import "base/rows";
+
+@import "modules/forms";
+@import "modules/slider";
+@import "modules/modal";
+@import "modules/tabs";
+@import "modules/select";
+@import "modules/quantity";
+@import "modules/multi-range";
+@import "modules/pagination";
+@import "modules/video";
+
+@import "layout/header";
+@import "layout/intro";
+@import "layout/category";
+@import "layout/popular";
+@import "layout/partners";
+@import "layout/advantages";
+@import "layout/reviews";
+@import "layout/advertising";
+@import "layout/blog";
+@import "layout/last-news";
+@import "layout/promotional-product";
+@import "layout/footer";
+
+@import "page/page-basket";
+@import "page/page-blog";
+@import "page/page-register";
+@import "page/page-catalog";
+@import "page/page-checkout";
+
+@import "single/single-article";
+@import "single/single-product";

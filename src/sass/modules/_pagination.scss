@@ -1,0 +1,73 @@
+.pagination {
+  margin-top: 35px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (min-width: map_get($grid-breakpoints, md)) {
+    flex-wrap: nowrap;
+  }
+
+  .page-item {
+    display: flex;
+    align-items: center;
+    color: $gray-500;
+    margin: 0 4px 15px;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      margin: 0 4px;
+    }
+
+    &-button {
+      justify-content: center;
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        justify-content: flex-start;
+      }
+
+      .btn {
+
+        &-outline-primary {
+          color: $primary;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+
+      &--prev {
+        order: 1;
+        width: 50%;
+        margin: 0;
+
+        @media (min-width: map_get($grid-breakpoints, md)) {
+          width: auto;
+          order: unset;
+          margin-right: 60px;
+        }
+      }
+
+      &--next {
+        order: 2;
+        width: 50%;
+        margin: 0;
+
+        @media (min-width: map_get($grid-breakpoints, md)) {
+          width: auto;
+          order: unset;
+          margin-left: 60px;
+        }
+      }
+    }
+  }
+  
+  .page-link {
+    border-radius: 5px;
+    background: #fff;
+    font-weight: normal;
+
+    &:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

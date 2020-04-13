@@ -1,0 +1,47 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  color: #fff;
+  font-weight: 600;
+  transition: .5s;
+  z-index: 5;
+
+  &-primary {
+
+    svg {
+      fill: #fff;
+      margin-right: 10px;
+    }
+
+    &:hover {
+      color: #fff;
+      background: $secondary;
+      border-color: $secondary;
+    }
+  }
+
+  &-outline-primary {
+    color: $body-color;
+
+    svg {
+      fill: $body-color;
+      margin-right: 5px;
+      transition: .5s;
+    }
+
+    &:hover {
+      color: #fff;
+
+      svg{
+        fill: #fff;
+      }
+    }
+  }
+
+  &-icon {
+    padding: 12px 15px;
+  }
+}

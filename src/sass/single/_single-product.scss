@@ -1,0 +1,271 @@
+#single-product {
+  padding-bottom: 70px;
+}
+
+.product-gallery {
+  position: relative;
+  display: flex;
+
+  .product-card-badges {
+    right: auto;
+    left: 0;
+    align-items: flex-start;
+  }
+
+  &-body {
+    position: relative;
+    width: 75%;
+    padding-bottom: 81.3186%;
+    overflow: hidden;
+    margin-right: 3px;
+
+    &-item {
+      @extend %pos;
+      transform: scale(0);
+      transition: .5s;
+
+      &.active {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &-nav {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+
+    &-item {
+      position: relative;
+      flex: 1;
+      max-height: 25%;
+      margin-bottom: 3px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .video-prev {
+        padding-bottom: 0;
+      }
+
+      .product-gallery-item {
+        cursor: pointer;
+        transition: .5s;
+
+        &:hover {
+          border-color: $primary;
+        }
+      }
+    }
+  }
+
+  &-item {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-height: 90%;
+    }
+  }
+}
+
+.product-description {
+  margin-top: 20px;
+
+  @media (min-width: map_get($grid-breakpoints, md)) {
+    padding-left: 30px;
+    margin-top: 0;
+  }
+
+  p {
+    color: $gray-500;
+  }
+
+  &-info {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 25px;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &-status {
+    display: inline-block;
+    padding: 2px 8px;
+    color: #fff;
+    font-size: .75rem;
+    margin-bottom: 15px;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      margin-right: 25px;
+      margin-bottom: 0;
+    }
+
+    &--available {
+      background: $green;
+    }
+  }
+
+  &-feature {
+    padding-top: 20px;
+    border-top: 1px solid $gray-400;
+  }
+
+  &-vendor-code {
+    color: $gray-500;
+  }
+
+  &-footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid $gray-400;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .product-card-price {
+      margin-bottom: 15px;
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        margin-right: 25px;
+        margin-bottom: 0;
+      }
+    }
+
+    .quantity {
+      margin-bottom: 15px;
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        margin-right: 25px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    p {
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.product-info {
+
+  .custom-tabs {
+
+    &-nav {
+      display: flex;
+      margin-bottom: 25px;
+      flex-direction: column;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        flex-direction: row;
+      }
+
+      li {
+        position: relative;
+        flex: 1;
+        padding: 10px;
+        text-align: center;
+        font-size: 1rem;
+        cursor: pointer;
+        color: $gray-500;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+          font-size: 1.125rem;
+          padding: 20px;
+        }
+
+        &.active {
+          color: $body-color;
+
+          &::before {
+            background: $primary;
+          }
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 1px;
+          background: $gray-400;
+          transition: .5s;
+        }
+
+        &:hover {
+          color: $body-color;
+
+          &::before {
+            background: $primary;
+          }
+        }
+      }
+    }
+
+    &-body {
+
+      &-item {
+
+        p {
+          color: $gray-500;
+        }
+
+        ul {
+
+          li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+
+            span {
+              text-align: right;
+              max-width: 30%;
+
+              &:first-of-type {
+                text-align: left;
+                max-width: 60%;
+                color: $gray-500;
+              }
+            }
+
+            .divider {
+              flex: 1;
+              margin: 0 10px;
+              border-bottom: 1px dashed $gray-400;
+            }
+          }
+        }
+      }
+    }
+  }
+}
